@@ -1,0 +1,4 @@
+flask
+requests
+aws-lambda-powertools
+awslambdaric

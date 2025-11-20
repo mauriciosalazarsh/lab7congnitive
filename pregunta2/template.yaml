@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  FlaskCatalogo:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.app
+      Runtime: python3.12
+      CodeUri: .
+      Timeout: 15
+      MemorySize: 512
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-XXXXXXXX
+        SubnetIds:
+          - subnet-AAAA
+          - subnet-BBBB
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /catalogo
+            Method: GET
