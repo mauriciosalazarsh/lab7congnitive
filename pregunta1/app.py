@@ -8,9 +8,8 @@ API = "https://api.exchangerate.host/latest?base=USD"
 @app.route("/")
 def get_rates():
     r = requests.get(API).json()
-    rates = {
+    return jsonify({
         "dolar": 1,
         "euro": r["rates"]["EUR"],
         "sol": r["rates"]["PEN"]
-    }
-    return jsonify(rates)
+    })
