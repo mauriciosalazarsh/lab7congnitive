@@ -1,4 +1,4 @@
-rds_host = "TU_ENDPOINT_RDS.amazonaws.com"
+rds_host = "database-vehiculos.c9akl2mxyz12.us-east-1.rds.amazonaws.com"
 db_user = "admin"
-db_password = "TU_PASSWORD"
+db_password = "lab07password"
 db_name = "vehiculosdb"
